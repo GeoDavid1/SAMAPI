@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#SBATCH --time=1:00:00                       # Walltime: hours:minutes:seconds
+#SBATCH --ntasks=1                           # Number of processor cores (i.e. tasks)
+#SBATCH --nodes=1                            # Number of nodes
+#SBATCH --gpus=1                             # Number of GPUs
+#SBATCH --mem-per-cpu=64000M                 # 64G memory per CPU core
+#SBATCH --mail-type=BEGIN                     # Email notification for job start
+#SBATCH --mail-type=END                       # Email notification for job end
+#SBATCH --mail-type=FAIL                      # Email notification for job failure
+#SBATCH --qos=dw87                            # Quality of service
+#SBATCH --partition=dw                        # Partition to submit the job
+
+# Change to the directory where your script is located
+cd /home/geodavid/SAMAPI         # Change to your script directory
+
+
+# Run your Python script
+python load_pretrained_model.py               # Replace with your script name
